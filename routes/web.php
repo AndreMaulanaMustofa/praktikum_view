@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,41 +15,23 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class], 'welcome');
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+Route::get('/checkout', [PageController::class], 'checkout');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [PageController::class], 'contact');
 
-Route::get('/experiance', function () {
-    return view('experiance');
-});
+Route::get('/experiance', [PageController::class], 'experiance');
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [PageController::class], 'login');
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register', [PageController::class], 'register');
 
-Route::get('/shop', function () {
-    return view('shop');
-});
+Route::get('/shop', [PageController::class], 'shop');
 
-Route::get('/single', function () {
-    return view('single');
-});
+Route::get('/single', [PageController::class], 'single');
 
-Route::get('/team', function () {
-    return view('team');
-});
+Route::get('/team', [PageController::class], 'team');
 
 Auth::routes();
 
