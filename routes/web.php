@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Routing\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,24 +17,34 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [PageController::class], 'welcome');
-
-Route::get('/checkout', [PageController::class], 'checkout');
-
-Route::get('/contact', [PageController::class], 'contact');
-
-Route::get('/experiance', [PageController::class], 'experiance');
-
-Route::get('/login', [PageController::class], 'login');
-
-Route::get('/register', [PageController::class], 'register');
-
-Route::get('/shop', [PageController::class], 'shop');
-
-Route::get('/single', [PageController::class], 'single');
-
-Route::get('/team', [PageController::class], 'team');
-
 Auth::routes();
+
+Route::get('/', function(){
+    return view('welcome');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::get('/experiance', function () {
+    return view('experiance');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/single', function () {
+    return view('single');
+});
+
+Route::get('/team', function () {
+    return view('team');
+});
+
+Route::get('/contact', function(){
+    return view('contact');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

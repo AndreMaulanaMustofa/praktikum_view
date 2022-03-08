@@ -54,17 +54,17 @@
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+						<a href="/"><img src="images/logo.png" alt=""/></a>
 					 </div>
 					 <div class="menu">
 						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
 						    <ul class="nav" id="nav">
-						    	<li><a href="shop.html">Shop</a></li>
-						    	<li><a href="team.html">Team</a></li>
-						    	<li><a href="experiance.html">Events</a></li>
-						    	<li><a href="experiance.html">Experiance</a></li>
-						    	<li><a href="shop.html">Company</a></li>
-								<li><a href="contact.html">Contact</a></li>
+						    	<li><a href="/shop">Shop</a></li>
+						    	<li><a href="/team">Team</a></li>
+						    	<li><a href="/experiance">Events</a></li>
+						    	<li><a href="/experiance">Experiance</a></li>
+						    	<li><a href="/shop">Company</a></li>
+								<li><a href="/contact">Contact</a></li>
 								<div class="clear"></div>
 							</ul>
 							<script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -101,8 +101,7 @@
 						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
                           $12.00</span></li>
 						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="check_button"><a href="/checkout">Check out</a></div>
 							 <div class="clear"></div>
 						  </div>
 						  <div class="clear"></div>
