@@ -78,22 +78,30 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 team_bottom">
+                <div class="col-md-4 team_bottom">
+                    <h4>Advantages</h4>
+                    @forelse ($news as $item)
 				  <ul class="team_list">
-					<h4>Advantages</h4>
-		            <li><a href="#">Always free from repetition</a><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></li>
-		            <li><a href="#">Always free from repetition</a><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></li>
-		            <li><a href="#">Always free from repetition</a><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></li>
-		            <li><a href="#">Always free from repetition</a><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></li>
+                    <li><a href="#">{{ $item->title }}</a><p>{{ $item->content }}</p></li>
 		          </ul>
-				</div>
-				<div class="col-md-8">
-					<ul class="team_list">
-					 <h4>Vision Statement</h4>
-					 <p class="m_7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-		             <img src="images/team5.jpg" class="img-responsive" alt=""/>
+                    @empty
+                  <ul class="team_list">
+                    <li>
+                        <a href="#">Harap Isi Keuntungannya terlebih dahulu</a>
+                        <p>Belum terisi</p></li>
 		          </ul>
-				</div>
+                  @endforelse
+                  <div class="mt-3">
+                      {{ $news->links() }}
+                  </div>
+                </div>
+                    <div class="col-md-8">
+                        <ul class="team_list">
+                            <h4>Vision Statement</h4>
+                            <p class="m_7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            <img src="images/team5.jpg" class="img-responsive" alt=""/>
+                        </ul>
+                    </div>
 			</div>
 		</div>
 	   </div>
