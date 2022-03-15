@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
+use Database\Factories\NewsFactory;
 use Illuminate\Routing\Controller;
 
 /*
@@ -39,9 +40,7 @@ Route::get('/single', function () {
     return view('single');
 });
 
-Route::get('/team', function () {
-    return view('team');
-});
+Route::get('/team', [NewsController::class, 'team'])->name('news.team');
 
 Route::get('/contact', function(){
     return view('contact');
